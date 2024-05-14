@@ -1,0 +1,175 @@
+*,*::before,*::after{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+
+    
+    display:grid;
+    place-items: center;
+
+}
+.game-info{
+    background:rgba(255,255,255,0.15);
+position: absolute;
+top: 3rem;
+left: 50%;
+transform: translateX(-50%);
+    border-radius: 8px;
+
+    text-align: center;
+    padding: 0.5rem 2rem;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.15);;
+}
+
+
+
+.tic-tak-too{
+   place-items: center;
+ 
+    width: 90%;
+    max-width: 20rem;
+    background:rgba(255,255,255,0.15);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+ 
+    border: 1px solid rgba(255,255,255,0.15);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.box1 ,.box2,.box4,.box5{
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.box3,.box6{
+    border-bottom: 2px solid white;
+}
+.box7,.box8{
+    border-right: 2px solid white;
+}
+
+
+
+
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}    
+
+/* ---------------------------- */
+.winner{
+    position: absolute;
+    font-weight: 900;
+    margin-top: 18.2rem;
+    font-size: 1.0rem;
+    color: black;
+      display: none; 
+
+}
+.winner.active{
+    display: flex;
+}
+.looser{
+     margin-top:18.2rem;
+    position: absolute;
+    color:black;
+    font-weight: 900;
+    
+    font-size: 1.0rem;
+display: none; 
+
+}
+.looser.active{
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+
+.btn{ 
+    position: absolute;
+    bottom: 3rem;
+   
+   
+    background:rgba(255,255,255,0.15);
+
+border-radius: 1rem;
+padding: 0.7rem 2rem;
+border: 2px solid  rgba(255,255,255,0.15);
+ background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+ display: none; 
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+ 
+
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+}
+
+.btn:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.btn:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+
